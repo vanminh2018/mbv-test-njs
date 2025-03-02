@@ -85,5 +85,5 @@ jobs:
 
       # Bước 3: Thực hiện deploy
       - name: Deploy application
-        if: ${{ github.event_name == 'pull_request' && needs.test.result == 'success' }}
+        if: ${{ github.event_name == 'push' && needs.test.result == 'success' }}
         run: echo "Deploying to staging..."
