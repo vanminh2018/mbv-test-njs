@@ -45,6 +45,7 @@ jobs:
         run: |
           echo "=== ALL ENV VARIABLES ==="
           printenv
+          docker run -it --rm busybox printenv
 
       # Bước 2: In các biến cụ thể
       - name: Print specific variables
