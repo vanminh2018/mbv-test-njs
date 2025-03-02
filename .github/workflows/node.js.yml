@@ -68,7 +68,7 @@ jobs:
 
       - name: Run tests in Docker container
         run: |
-          docker run --rm \
+          docker run --rm -i \
             -v "${{ github.workspace }}":/app \
             -w /app \
             ${{ env.DOCKER_IMAGE }} \
