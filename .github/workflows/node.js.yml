@@ -60,15 +60,15 @@ jobs:
           driver-opts: |
             image=moby/buildkit:master
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      # - name: Login to Docker Hub
+      #   uses: docker/login-action@v2
+      #   with:
+      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Run tests in Docker container
         run: |
-          docker run --rm -i \
+          docker run --rm \
             -v "${{ github.workspace }}":/app \
             -w /app \
             ${{ env.DOCKER_IMAGE }} \
