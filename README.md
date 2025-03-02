@@ -1,4 +1,4 @@
-# Next.js + Jest1245
+# Next.js + Jest12456
 
 This example shows how to configure Jest to work with Next.js.
 
